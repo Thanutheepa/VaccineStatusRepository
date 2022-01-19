@@ -11,7 +11,7 @@ namespace VaccineStatus.WebApi.Controllers
         [HttpGet("GetMedicalInstitues")]
         public IActionResult Get()
         {
-            var get = new string[] { "Task 1", "Task 2", "Task 3" };
+            var get = new string[] { "Task 1", "Task 2", "Task 3", "Task 4" };
             return Ok(get);
         }
 
