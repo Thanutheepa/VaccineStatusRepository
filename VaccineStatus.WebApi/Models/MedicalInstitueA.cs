@@ -18,5 +18,6 @@
         public string? OfficialContactPerson { get; set; }
         public int UserId { get; set; }
         public int VaccineDataId { get; set; }
+        public string? LastName { get; set; }
     }
 }

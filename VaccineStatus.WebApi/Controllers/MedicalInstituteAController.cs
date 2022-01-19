@@ -11,17 +11,18 @@ namespace VaccineStatus.WebApi.Controllers
         [HttpGet("GetMedicalInstitues")]
         public IActionResult Get()
         {
-            return Ok();
+            var get = new string[] { "Task 1", "Task 2", "Task 3" };
+            return Ok(get);
         }
 
         [HttpPost("CreateMedicalInstitue")]
-        public IActionResult Create([FromBody] MedicalInstitueA request)
+        public IActionResult Create()
         {
             return Ok();
         }
 
         [HttpPut("UpdateMedicalInstitue")]
-        public IActionResult Update([FromBody] MedicalInstitueA request)
+        public IActionResult Update()
         {
             return Ok();
         }
@@ -29,6 +30,9 @@ namespace VaccineStatus.WebApi.Controllers
         [HttpDelete("DeleteMedicalInstitue/{Id}")]
         public IActionResult Delete(int Id)
         {
+            var somethingWentWrong = true;
+            if (somethingWentWrong)
+                return BadRequest();
             return Ok();
         }
 
