@@ -1,8 +1,9 @@
 ﻿using VaccineStatus.WebApi.Models;
+using VaccineStatusWeb.Services;
 
 namespace VaccineStatus.WebApi.Services
 {
-    public class MedicalInstituteService
+    public class MedicalInstituteService : IMedicalInstituteRepository 
     {
         //Get MedicalInstitutes
         public List<MedicalInstitute> AllMedicalInstitutes()

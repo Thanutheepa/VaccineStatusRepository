@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using VaccineStatus.WebApi.Models;
 using VaccineStatus.WebApi.Services;
-using static VaccineStatus.WebApi.Models.MedicalInstituteStatus;
+using VaccineStatusWeb.Services;
 
 namespace VaccineStatus.WebApi.Controllers
 {
@@ -10,11 +9,11 @@ namespace VaccineStatus.WebApi.Controllers
     [ApiController]
     public class MedicalInstitutesController : ControllerBase
     {
-        private MedicalInstituteService? _mediicalInstituteService;
+        private readonly IMedicalInstituteRepository _mediicalInstituteService;
 
-        public MedicalInstitutesController()
+        public MedicalInstitutesController(IMedicalInstituteRepository repository)
         {
-               _mediicalInstituteService = new MedicalInstituteService();
+               _mediicalInstituteService = repository;
         }
 
         [HttpGet]
