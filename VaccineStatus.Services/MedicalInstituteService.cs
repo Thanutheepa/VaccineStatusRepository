@@ -3,7 +3,7 @@ using VaccineStatusWeb.Services;
 
 namespace VaccineStatus.WebApi.Services
 {
-    public class MedicalInstituteService : IMedicalInstituteRepository 
+    public class MedicalInstituteSqlServiceService : IMedicalInstituteRepository 
     {
         //Get MedicalInstitutes
         public List<MedicalInstitute> AllMedicalInstitutes()

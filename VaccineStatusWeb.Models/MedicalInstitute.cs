@@ -18,6 +18,6 @@
         public string? OfficialContactPerson { get; set; }
         public int UserId { get; set; }
         public int VaccineDataId { get; set; }
-        public MedicalInstituteStatus? Status { get; set; } // New, Inprogress, Completed
+        public int? Status { get; set; } // New, Inprogress, Completed
     }
 }

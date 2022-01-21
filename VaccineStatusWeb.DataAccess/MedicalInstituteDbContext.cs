@@ -14,8 +14,20 @@ namespace VaccineStatusWeb.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server = localhost; Database = myMedicalInstituteDb; Trusted_Connection = True";
+            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = myMedicalInstituteDb; Trusted_Connection = True";
             optionsBuilder.UseSqlServer(connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<MedicalInstitute>().HasData(new MedicalInstitute
+            {
+                Id = 1,
+                Name = "PumbahinnaHospital - DB",
+                Description = "LocatedInRatnapura",
+                CreatedBy = "Adheera",
+            });
+
         }
 
     }
