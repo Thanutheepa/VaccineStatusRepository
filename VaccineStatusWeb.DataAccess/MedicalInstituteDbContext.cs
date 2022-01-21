@@ -5,12 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using VaccineStatus.WebApi.Models;
+using VaccineStatusWeb.Models;
 
 namespace VaccineStatusWeb.DataAccess
 {
     public class MedicalInstituteDbContext : DbContext
     {
         public DbSet<MedicalInstitute>? MedicalInstitutes { get; set; }
+        public DbSet<VaccineData>? VaccineDatas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -29,6 +31,8 @@ namespace VaccineStatusWeb.DataAccess
             });
 
         }
+
+
 
     }
 }
