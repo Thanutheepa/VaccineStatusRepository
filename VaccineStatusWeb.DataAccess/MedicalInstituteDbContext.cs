@@ -22,17 +22,45 @@ namespace VaccineStatusWeb.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<MedicalInstitute>().HasData(new MedicalInstitute
+            modelBuilder.Entity<VaccineData>().HasData(new VaccineData[]
             {
-                Id = 1,
-                Name = "PumbahinnaHospital - DB",
-                Description = "LocatedInRatnapura",
-                CreatedBy = "Adheera",
+                new VaccineData{ Id = 1, UserName = "Dorin"},
+                new VaccineData{ Id = 2, UserName = "Shara"},
+                new VaccineData{ Id = 3, UserName = "Tom"},
+                new VaccineData{ Id = 4, UserName = "Sana"}
+            });
+
+
+            modelBuilder.Entity<MedicalInstitute>().HasData(new MedicalInstitute[]
+            {
+              new MedicalInstitute
+                {
+                    Id = 1,
+                    Name = "PumbahinnaHospital - DB",
+                    Description = "LocatedInRatnapura",
+                    CreatedBy = "Adheera",
+                    VaccineDataId = 1
+                },
+
+              new MedicalInstitute
+                {
+                    Id = 2,
+                    Name = "AnuradhapuraHospital",
+                    Description = "LocatedInAnuradhapura",
+                    CreatedBy = "Doily",
+                    VaccineDataId = 1
+                },
+
+              new MedicalInstitute
+                { 
+                    Id = 3,
+                    Name = "BadullaHospital",
+                    Description = "LocatedInBadulla",
+                    CreatedBy = "John",
+                    VaccineDataId = 2
+                },
             });
 
         }
-
-
-
     }
 }
