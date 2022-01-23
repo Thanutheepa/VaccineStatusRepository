@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VaccineStatus.WebApi.Models;
 
-namespace VaccineStatusWeb.Services
+namespace VaccineStatusWeb.Services.MedicalInstitutes
 {
     public interface IMedicalInstituteRepository
     {

@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using VaccineStatus.WebApi.Services;
-using VaccineStatusWeb.Services;
+using VaccineStatusWeb.Services.MedicalInstitutes;
 
 namespace VaccineStatus.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[[MedicalInstitutes]]")]
     [ApiController]
     public class MedicalInstitutesController : ControllerBase
     {

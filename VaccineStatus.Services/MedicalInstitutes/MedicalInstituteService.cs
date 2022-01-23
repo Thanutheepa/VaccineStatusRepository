@@ -1,7 +1,7 @@
 ﻿using VaccineStatus.WebApi.Models;
 using VaccineStatusWeb.Services;
 
-namespace VaccineStatus.WebApi.Services
+namespace VaccineStatusWeb.Services.MedicalInstitutes
 {
     public class MedicalInstituteSqlServiceService : IMedicalInstituteRepository 
     {

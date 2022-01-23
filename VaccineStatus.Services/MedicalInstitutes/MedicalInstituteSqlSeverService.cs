@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using VaccineStatus.WebApi.Models;
 using VaccineStatusWeb.DataAccess;
 
-namespace VaccineStatusWeb.Services
+namespace VaccineStatusWeb.Services.MedicalInstitutes
 {
     public class MedicalInstituteSqlSeverService : IMedicalInstituteRepository
     {

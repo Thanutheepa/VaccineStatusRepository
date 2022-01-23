@@ -1,5 +1,6 @@
-using VaccineStatus.WebApi.Services;
-using VaccineStatusWeb.Services;
+
+using VaccineStatusWeb.Services.MedicalInstitutes;
+using VaccineStatusWeb.Services.VaccineDatas;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlServiceService>();
+builder.Services.AddScoped<IVaccineDataRepository, VaccineDataSqlServerService>();
 
 var app = builder.Build();
 
