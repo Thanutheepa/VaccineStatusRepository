@@ -10,10 +10,15 @@ namespace VaccineStatusWeb.Services.MedicalInstitutes
 {
     public class MedicalInstituteSqlSeverService : IMedicalInstituteRepository
     {
-        private readonly MedicalInstituteDbContext context = new MedicalInstituteDbContext();
+        private readonly MedicalInstituteDbContext _context = new MedicalInstituteDbContext();
         public List<MedicalInstitute> AllMedicalInstitutes()
         {
-            return context.MedicalInstitutes.ToList();
+            return _context.MedicalInstitutes.ToList();
+        }
+
+        public MedicalInstitute GetMedicalInstitute(int id)
+        {
+            return _context.MedicalInstitutes.Find(id);
         }
     }
 }

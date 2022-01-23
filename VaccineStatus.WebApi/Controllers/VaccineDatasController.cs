@@ -24,6 +24,12 @@ namespace VaccineStatus.WebApi.Controllers
         public IActionResult GetVaccineData(int id)
         {
             var VaccineData = _service.GetVaccineData(id);
+
+            if (VaccineData == null)
+            {
+                return NotFound();
+            }
+
             return Ok(VaccineData);
         }
     }

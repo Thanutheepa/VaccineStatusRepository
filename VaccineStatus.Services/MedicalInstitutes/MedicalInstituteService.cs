@@ -45,5 +45,10 @@ namespace VaccineStatusWeb.Services.MedicalInstitutes
 
             return medicalInstitutes;
         }
+
+        public MedicalInstitute GetMedicalInstitute(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -23,14 +23,16 @@ namespace VaccineStatus.WebApi.Controllers
         }
 
         [HttpGet("{id?}")]
-        public IActionResult GetMedicalInstitues(int? id)
+        public IActionResult GetMedicalInstitue(int id)
         {
-            var myMedicalInstitutes = _mediicalInstituteService?.AllMedicalInstitutes(); //.Where(i => i.Id == id)
-            
-            if (id is null) return Ok(myMedicalInstitutes);
+            var MedicalInstitute = _mediicalInstituteService?.GetMedicalInstitute(id);       
 
-            myMedicalInstitutes = myMedicalInstitutes?.Where(x => x.Id == id).ToList();
-            return Ok(myMedicalInstitutes);
+            if (MedicalInstitute == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(MedicalInstitute);
         }
 
         

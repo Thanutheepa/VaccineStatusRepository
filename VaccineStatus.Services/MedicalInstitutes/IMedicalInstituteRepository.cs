@@ -10,5 +10,6 @@ namespace VaccineStatusWeb.Services.MedicalInstitutes
     public interface IMedicalInstituteRepository
     {
         public List<MedicalInstitute> AllMedicalInstitutes();
+        public MedicalInstitute GetMedicalInstitute(int id);
     }
 }
