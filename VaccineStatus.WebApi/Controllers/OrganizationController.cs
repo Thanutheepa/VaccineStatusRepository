@@ -16,7 +16,7 @@ namespace VaccineStatus.WebApi.Controllers
 
         public IActionResult Get()
         {
-            return Ok("Getting all the Medical Institute data.");
+            return Ok("Getting all  Organizations data.");
         }
 
 
@@ -25,7 +25,7 @@ namespace VaccineStatus.WebApi.Controllers
 
         public IActionResult GetById(int id)
         {
-            return Ok("Getting one Medical Institute data #{id}.");
+            return Ok("Getting an Organization data #{id}.");
         }
 
 
@@ -34,7 +34,7 @@ namespace VaccineStatus.WebApi.Controllers
 
         public IActionResult Post()
         {
-            return Ok("Create Medical Institute.");
+            return Ok("Create an Organization.");
         }
 
         [HttpPut]
@@ -42,7 +42,7 @@ namespace VaccineStatus.WebApi.Controllers
 
         public IActionResult Put()
         {
-            return Ok("Update Medical Institute.");
+            return Ok("Update an Organization.");
         }
 
         [HttpDelete]
@@ -50,7 +50,7 @@ namespace VaccineStatus.WebApi.Controllers
 
         public IActionResult Delete(int id)
         {
-            return Ok("Delete Medical Institute.");
+            return Ok("Delete an Organization.");
         }
     }
 }

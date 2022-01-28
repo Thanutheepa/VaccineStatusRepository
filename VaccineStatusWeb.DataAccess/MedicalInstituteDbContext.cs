@@ -16,7 +16,7 @@ namespace VaccineStatusWeb.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = myNewDb; Trusted_Connection = True";
+            var connectionString = @"Server = (localdb)\mssqllocaldb; Database = myVaccineDb; Trusted_Connection = True";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
