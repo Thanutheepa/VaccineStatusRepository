@@ -16,7 +16,7 @@ builder.Services.AddControllers(options=>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlServiceService>();
+builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlSeverService>();
 builder.Services.AddScoped<IVaccineDataRepository, VaccineDataSqlServerService>();
 
 var app = builder.Build();

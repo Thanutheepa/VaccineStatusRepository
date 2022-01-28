@@ -1,14 +1,10 @@
 ﻿namespace VaccineStatus.WebApi.Models
 {
-    public class MedicalInstituteStatus
+    public enum MedicalInstituteStatus
     {
+         New,
+         Inprogress,
+         Completed
         
-
-        public enum MedicalInstituteStatusEnum
-        {
-            New,
-            Inprogress,
-            Completed
-        }
     }
 }

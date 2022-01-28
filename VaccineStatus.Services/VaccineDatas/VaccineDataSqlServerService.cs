@@ -18,6 +18,7 @@ namespace VaccineStatusWeb.Services.VaccineDatas
 
         public VaccineData GetVaccineData(int id)
         {
+           
             return _context.VaccineDatas.Find(id);
         }
     }

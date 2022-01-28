@@ -18,16 +18,16 @@ namespace VaccineStatus.WebApi.Controllers
         [HttpGet]
         public IActionResult GetMedicalInstitues()
         {
-           var myMedicalInstitutes = _mediicalInstituteService?.AllMedicalInstitutes();
+           var myMedicalInstitutes = _mediicalInstituteService.AllMedicalInstitutes();
             return Ok(myMedicalInstitutes);
         }
 
         [HttpGet("{id?}")]
         public IActionResult GetMedicalInstitue(int id)
         {
-            var MedicalInstitute = _mediicalInstituteService?.GetMedicalInstitute(id);       
+            var MedicalInstitute = _mediicalInstituteService.GetMedicalInstitute(id);       
 
-            if (MedicalInstitute == null)
+            if (MedicalInstitute is null)
             {
                 return NotFound();
             }
