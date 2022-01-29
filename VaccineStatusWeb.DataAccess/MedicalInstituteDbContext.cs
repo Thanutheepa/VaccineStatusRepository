@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using VaccineStatus.WebApi.Models;
 using VaccineStatusWeb.Models;
 
+
 namespace VaccineStatusWeb.DataAccess
 {
     public class MedicalInstituteDbContext : DbContext
@@ -14,6 +15,10 @@ namespace VaccineStatusWeb.DataAccess
         public DbSet<MedicalInstitute> MedicalInstitutes { get; set; }
         public DbSet<VaccineData> VaccineDatas { get; set; }
         public DbSet<Organization> Organizations { get; set; }
+        public DbSet<Vaccine> Vaccines { get; set; }
+
+       
+
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -26,10 +31,10 @@ namespace VaccineStatusWeb.DataAccess
         {
             modelBuilder.Entity<VaccineData>().HasData(new VaccineData[]
             {
-                new VaccineData{ Id = 1, UserName = "Dorin",VaccineBatch=123,Date=DateTime.Now,VaccineCentre="SUSL-MC",UserId=1},
-                new VaccineData{ Id = 2, UserName = "Shara",VaccineBatch=466,Date=DateTime.Now,VaccineCentre="Pambahinna",UserId=2},
-                new VaccineData{ Id = 3, UserName = "Tom",VaccineBatch=789,Date=DateTime.Now,VaccineCentre="Balangoda",UserId=4},
-                new VaccineData{ Id = 4, UserName = "Sana",VaccineBatch=152,Date=DateTime.Now,VaccineCentre="Ratnapura",UserId=5}
+                new VaccineData{ Id = 1, UserName = "Dorin",VaccineBatchId=123,Date=DateTime.Now,VaccineCentreId=12434,UserId=1},
+                new VaccineData{ Id = 2, UserName = "Shara",VaccineBatchId=466,Date=DateTime.Now,VaccineCentreId=98765,UserId=2},
+                new VaccineData{ Id = 3, UserName = "Tom",VaccineBatchId=789,Date=DateTime.Now,VaccineCentreId=098765,UserId=4},
+                new VaccineData{ Id = 4, UserName = "Sana",VaccineBatchId=152,Date=DateTime.Now,VaccineCentreId=98762,UserId=5}
             });
 
 
@@ -159,6 +164,44 @@ namespace VaccineStatusWeb.DataAccess
                     PhoneNumber =0123456783,
                     ContactPerson ="Dr.Kaliyawansa",
               },
+            });
+
+
+            modelBuilder.Entity<Vaccine>().HasData(new Vaccine[]
+            {
+                new Vaccine
+                {
+                    Id =1,
+                    VaccineName ="Sinopharm BIBP",
+                    Type ="Inactivated",
+                    Country ="China" 
+                },
+
+                new Vaccine
+                {
+                     Id =2,
+                    VaccineName ="Pfizer–BioNTech",
+                    Type ="TozinameranVaccineInjection",
+                    Country ="Singapore"
+                },
+
+                new Vaccine
+                {
+                     Id =3,
+                    VaccineName ="Moderna",
+                    Type ="mRNA",
+                    Country ="America"
+                },
+
+
+                 new Vaccine
+                {
+                     Id =4,
+                    VaccineName ="Sputnik V",
+                    Type ="Viral vector",
+                    Country ="Russia"
+                },
+
             });
 
         }
