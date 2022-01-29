@@ -13,6 +13,8 @@ namespace VaccineStatusWeb.DataAccess
     {
         public DbSet<MedicalInstitute> MedicalInstitutes { get; set; }
         public DbSet<VaccineData> VaccineDatas { get; set; }
+        public DbSet<Organization> Organizations { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -99,6 +101,67 @@ namespace VaccineStatusWeb.DataAccess
               }
             });
 
+            
+        
+
+            modelBuilder.Entity<Organization>().HasData(new Organization[]
+            {
+              new Organization
+              {
+                    Id = 1,
+                    IsActive = true,
+                    IsDelete = false,
+                    DeletedBy ="none",
+                    DeletedOn =DateTime.Now,
+                    DeletedRemark="Not deleted",
+                    CreatedBy = "Adhil",
+                    CreatedOn =DateTime.Now,
+                    LastModifiedOn=DateTime.Now,
+                    LastModifiedBy="Not modified",
+                    Name = "Boston",
+                    Address ="BaselStreet,Balangoda,Ratnapura",
+                    PhoneNumber =0123456781,
+                    ContactPerson ="Dr.Silva",
+              },
+
+              new Organization
+              {
+                    Id = 2,
+                    IsActive = true,
+                    IsDelete = false,
+                    DeletedBy ="none",
+                    DeletedOn =DateTime.Now,
+                    DeletedRemark="Not deleted",
+                    CreatedBy = "Perera",
+                    CreatedOn =DateTime.Now,
+                    LastModifiedOn=DateTime.Now,
+                    LastModifiedBy="Not modified",
+                    Name = "Kiva",
+                    Address ="LiyanegeStreet,Badulla",
+                    PhoneNumber =0123456754,
+                    ContactPerson ="Dr.Isuru",
+              },
+
+              new Organization
+              {
+                    Id = 3,
+                    IsActive = true,
+                    IsDelete = false,
+                    DeletedBy ="none",
+                    DeletedOn =DateTime.Now,
+                    DeletedRemark="Not deleted",
+                    CreatedBy = "Munasinghe",
+                    CreatedOn =DateTime.Now,
+                    LastModifiedOn=DateTime.Now,
+                    LastModifiedBy="Not modified",
+                    Name = "Goodwill",
+                    Address ="NamalStreet,Colombo",
+                    PhoneNumber =0123456783,
+                    ContactPerson ="Dr.Kaliyawansa",
+              },
+            });
+
         }
     }
 }
+

@@ -1,6 +1,8 @@
 
 using VaccineStatusWeb.Services.MedicalInstitutes;
 using VaccineStatusWeb.Services.VaccineDatas;
+using VaccineStatusWeb.Services.Organizations;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +20,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlSeverService>();
 builder.Services.AddScoped<IVaccineDataRepository, VaccineDataSqlServerService>();
+builder.Services.AddScoped<IOrganizationRespository, OrganizationSqlServerService>();
 
 var app = builder.Build();
 
