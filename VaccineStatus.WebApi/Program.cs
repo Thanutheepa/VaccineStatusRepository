@@ -3,6 +3,8 @@ using VaccineStatusWeb.Services.MedicalInstitutes;
 using VaccineStatusWeb.Services.VaccineDatas;
 using VaccineStatusWeb.Services.Organizations;
 using VaccineStatusWeb.Services.Vaccines;
+using VaccineStatusWeb.Services.VaccineBatches;
+using VaccineStatusWeb.Services.VaccineDoses;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +25,8 @@ builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlSever
 builder.Services.AddScoped<IVaccineDataRepository, VaccineDataSqlServerService>();
 builder.Services.AddScoped<IOrganizationRespository, OrganizationSqlServerService>();
 builder.Services.AddScoped<IVaccineRepository, VaccineSqlSeverService>();
+builder.Services.AddScoped<IVaccineBatchRepository, VaccineBatchSqlSeverService>();
+builder.Services.AddScoped<IVaccineDoseRepository, VaccineDoseSqlSeverService>();
 
 var app = builder.Build();
 

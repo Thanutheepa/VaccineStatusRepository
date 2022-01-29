@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using VaccineStatusWeb.DataAccess;
 
@@ -11,9 +12,10 @@ using VaccineStatusWeb.DataAccess;
 namespace VaccineStatusWeb.DataAccess.Migrations
 {
     [DbContext(typeof(MedicalInstituteDbContext))]
-    partial class MedicalInstituteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220129200809_InitialDbAddVaccineDose")]
+    partial class InitialDbAddVaccineDose
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,15 +102,15 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         {
                             Id = 1,
                             CreatedBy = "Adheera",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4331),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5828),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4328),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5825),
                             DeletedRemark = "Not deleted",
                             Description = "LocatedInRatnapura",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4331),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5830),
                             Name = "PumbahinnaHospital - DB",
                             OfficialContactNumber = 12345678,
                             OfficialContactPerson = "Dr.Perera",
@@ -121,15 +123,15 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         {
                             Id = 2,
                             CreatedBy = "Doily",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4335),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5837),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4334),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5836),
                             DeletedRemark = "Not deleted",
                             Description = "LocatedInAnuradhapura",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4335),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5838),
                             Name = "AnuradhapuraHospital",
                             OfficialContactNumber = 12345678,
                             OfficialContactPerson = "Dr.Perera",
@@ -142,15 +144,15 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         {
                             Id = 3,
                             CreatedBy = "John",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4337),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5841),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4337),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5840),
                             DeletedRemark = "Not deleted",
                             Description = "LocatedInBadulla",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4339),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5842),
                             Name = "BadullaHospital",
                             OfficialContactNumber = 112258697,
                             OfficialContactPerson = "Dr.Saman",
@@ -226,14 +228,14 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Address = "BaselStreet,Balangoda,Ratnapura",
                             ContactPerson = "Dr.Silva",
                             CreatedBy = "Adhil",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4353),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5859),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4352),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5858),
                             DeletedRemark = "Not deleted",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4354),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5860),
                             Name = "Boston",
                             PhoneNumber = 123456781
                         },
@@ -243,14 +245,14 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Address = "LiyanegeStreet,Badulla",
                             ContactPerson = "Dr.Isuru",
                             CreatedBy = "Perera",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4357),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5866),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4356),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5864),
                             DeletedRemark = "Not deleted",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4358),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5866),
                             Name = "Kiva",
                             PhoneNumber = 123456754
                         },
@@ -260,14 +262,14 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Address = "NamalStreet,Colombo",
                             ContactPerson = "Dr.Kaliyawansa",
                             CreatedBy = "Munasinghe",
-                            CreatedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4362),
+                            CreatedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5871),
                             DeletedBy = "none",
-                            DeletedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4361),
+                            DeletedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5870),
                             DeletedRemark = "Not deleted",
                             IsActive = true,
                             IsDelete = false,
                             LastModifiedBy = "Not modified",
-                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4362),
+                            LastModifiedOn = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5872),
                             Name = "Goodwill",
                             PhoneNumber = 123456783
                         });
@@ -421,7 +423,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Date = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4226),
+                            Date = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5700),
                             UserId = 1,
                             UserName = "Dorin",
                             VaccineBatchId = 123,
@@ -430,7 +432,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Date = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4239),
+                            Date = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5709),
                             UserId = 2,
                             UserName = "Shara",
                             VaccineBatchId = 466,
@@ -439,7 +441,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         new
                         {
                             Id = 3,
-                            Date = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4240),
+                            Date = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5710),
                             UserId = 4,
                             UserName = "Tom",
                             VaccineBatchId = 789,
@@ -448,7 +450,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                         new
                         {
                             Id = 4,
-                            Date = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4241),
+                            Date = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5712),
                             UserId = 5,
                             UserName = "Sana",
                             VaccineBatchId = 152,
@@ -487,7 +489,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Id = 1,
                             HealthWorker = "Designated vaccinator by MOH approved vaccination site",
                             RequiredCount = 0,
-                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4436),
+                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5929),
                             VaccineId = 1
                         },
                         new
@@ -495,7 +497,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Id = 2,
                             HealthWorker = "Designated vaccinator by MOH approved vaccination site",
                             RequiredCount = 1,
-                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4438),
+                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5931),
                             VaccineId = 2
                         },
                         new
@@ -503,7 +505,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Id = 3,
                             HealthWorker = "Designated vaccinator by MOH approved vaccination site",
                             RequiredCount = 2,
-                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4439),
+                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5933),
                             VaccineId = 3
                         },
                         new
@@ -511,7 +513,7 @@ namespace VaccineStatusWeb.DataAccess.Migrations
                             Id = 4,
                             HealthWorker = "Designated vaccinator by MOH approved vaccination site",
                             RequiredCount = 3,
-                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 39, 11, 925, DateTimeKind.Local).AddTicks(4440),
+                            VaccinatedDate = new DateTime(2022, 1, 30, 1, 38, 8, 670, DateTimeKind.Local).AddTicks(5934),
                             VaccineId = 4
                         });
                 });

@@ -16,6 +16,8 @@ namespace VaccineStatusWeb.DataAccess
         public DbSet<VaccineData> VaccineDatas { get; set; }
         public DbSet<Organization> Organizations { get; set; }
         public DbSet<Vaccine> Vaccines { get; set; }
+        public DbSet<VaccineBatch> VaccineBatches { get; set; }
+        public DbSet<VaccineDose> VaccineDoses { get; set; }
 
        
 
@@ -203,6 +205,85 @@ namespace VaccineStatusWeb.DataAccess
                 },
 
             });
+
+            modelBuilder.Entity<VaccineBatch>().HasData(new VaccineBatch[]
+            {
+                new VaccineBatch
+                {
+                    Id =1,
+                    Name ="FirstBatch",
+                    VaccineId=1,
+                    BatchNumber=456789,
+                    Manufacturer="Gamaleya Research"
+                },
+
+                new VaccineBatch
+                {
+                    Id =2,
+                    Name ="SecondBatch",
+                    VaccineId=2,
+                    BatchNumber=456733,
+                    Manufacturer="Charles Research"
+                },
+
+                new VaccineBatch
+                {
+                    Id =3,
+                    Name ="ThirdBatch",
+                    VaccineId=3,
+                    BatchNumber=456789,
+                    Manufacturer=" BIONTECH"
+                },
+
+                new VaccineBatch
+                {
+                    Id =4,
+                    Name ="ForthBatch",
+                    VaccineId=4,
+                    BatchNumber=456321,
+                    Manufacturer="Beijing Institute"
+                }
+            });
+
+
+            modelBuilder.Entity<VaccineDose>().HasData(new VaccineDose[]
+            {
+                new VaccineDose
+                {
+                    Id = 1,
+                    VaccineId = 1,
+                    RequiredCount = 0,
+                    VaccinatedDate = DateTime.Now,
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                },
+
+                new VaccineDose
+                {
+                    Id = 2,
+                    VaccineId = 2,
+                    RequiredCount = 1,
+                    VaccinatedDate = DateTime.Now,
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                },
+
+                new VaccineDose
+                {
+                    Id = 3,
+                    VaccineId = 3,
+                    RequiredCount = 2,
+                    VaccinatedDate = DateTime.Now,
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                },
+
+                new VaccineDose
+                {
+                    Id = 4,
+                    VaccineId = 4,
+                    RequiredCount = 3,
+                    VaccinatedDate = DateTime.Now,
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                }
+            }) ;
 
         }
     }
