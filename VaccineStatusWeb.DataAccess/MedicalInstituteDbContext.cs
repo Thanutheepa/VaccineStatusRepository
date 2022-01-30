@@ -33,10 +33,10 @@ namespace VaccineStatusWeb.DataAccess
         {
             modelBuilder.Entity<VaccineData>().HasData(new VaccineData[]
             {
-                new VaccineData{ Id = 1, UserName = "Dorin",VaccineBatchId=123,Date=DateTime.Now,VaccineCentreId=12434,UserId=1},
-                new VaccineData{ Id = 2, UserName = "Shara",VaccineBatchId=466,Date=DateTime.Now,VaccineCentreId=98765,UserId=2},
-                new VaccineData{ Id = 3, UserName = "Tom",VaccineBatchId=789,Date=DateTime.Now,VaccineCentreId=098765,UserId=4},
-                new VaccineData{ Id = 4, UserName = "Sana",VaccineBatchId=152,Date=DateTime.Now,VaccineCentreId=98762,UserId=5}
+                new VaccineData{ Id = 1, UserName = "Dorin",Date=DateTime.Now,VaccineBatchId=1,VaccineCentreId=12434,UserId=1},
+                new VaccineData{ Id = 2, UserName = "Shara",Date=DateTime.Now,VaccineBatchId=1,VaccineCentreId=98765,UserId=2},
+                new VaccineData{ Id = 3, UserName = "Tom",Date=DateTime.Now,VaccineBatchId=2,VaccineCentreId=098765,UserId=4},
+                new VaccineData{ Id = 4, UserName = "Sana",Date=DateTime.Now,VaccineBatchId=3,VaccineCentreId=98762,UserId=5}
             });
 
 
@@ -212,36 +212,36 @@ namespace VaccineStatusWeb.DataAccess
                 {
                     Id =1,
                     Name ="FirstBatch",
-                    VaccineId=1,
                     BatchNumber=456789,
-                    Manufacturer="Gamaleya Research"
+                    Manufacturer="Gamaleya Research",
+                    VaccineId=1,
                 },
 
                 new VaccineBatch
                 {
                     Id =2,
                     Name ="SecondBatch",
-                    VaccineId=2,
                     BatchNumber=456733,
-                    Manufacturer="Charles Research"
+                    Manufacturer="Charles Research",
+                     VaccineId=2,
                 },
 
                 new VaccineBatch
                 {
                     Id =3,
                     Name ="ThirdBatch",
-                    VaccineId=3,
                     BatchNumber=456789,
-                    Manufacturer=" BIONTECH"
+                    Manufacturer=" BIONTECH",
+                    VaccineId=2
                 },
 
                 new VaccineBatch
                 {
                     Id =4,
                     Name ="ForthBatch",
-                    VaccineId=4,
                     BatchNumber=456321,
-                    Manufacturer="Beijing Institute"
+                    Manufacturer="Beijing Institute",
+                    VaccineId=3
                 }
             });
 
@@ -251,37 +251,37 @@ namespace VaccineStatusWeb.DataAccess
                 new VaccineDose
                 {
                     Id = 1,
-                    VaccineId = 1,
                     RequiredCount = 0,
                     VaccinatedDate = DateTime.Now,
-                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site",
+                    VaccineId = 1
                 },
 
                 new VaccineDose
                 {
                     Id = 2,
-                    VaccineId = 2,
                     RequiredCount = 1,
                     VaccinatedDate = DateTime.Now,
-                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site",
+                    VaccineId = 2
                 },
 
                 new VaccineDose
                 {
                     Id = 3,
-                    VaccineId = 3,
                     RequiredCount = 2,
                     VaccinatedDate = DateTime.Now,
-                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site",
+                    VaccineId = 3
                 },
 
                 new VaccineDose
                 {
                     Id = 4,
-                    VaccineId = 4,
                     RequiredCount = 3,
                     VaccinatedDate = DateTime.Now,
-                    HealthWorker = "Designated vaccinator by MOH approved vaccination site"
+                    HealthWorker = "Designated vaccinator by MOH approved vaccination site",
+                    VaccineId = 3
                 }
             }) ;
 

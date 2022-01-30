@@ -13,5 +13,8 @@ namespace VaccineStatusWeb.Models
         public string VaccineName { get; set; }
         public string Type { get; set; }
         public string Country { get; set; }
+
+        public ICollection<VaccineBatch> VaccineBatches { get; set;}
+        public ICollection<VaccineDose> VaccineDoses { get; set; }
     }
 }

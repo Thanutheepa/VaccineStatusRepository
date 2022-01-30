@@ -12,8 +12,14 @@ namespace VaccineStatusWeb.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int VaccineId { get; set; }
         public int BatchNumber { get; set; }
         public string Manufacturer { get; set; }
+
+
+        public int VaccineId { get; set; }
+        public Vaccine Vaccines { get; set; }
+
+
+        public ICollection<VaccineData> VaccinesDatas { get; set;}
     }
 }

@@ -10,9 +10,11 @@ namespace VaccineStatusWeb.Models
     public class VaccineDose
     {
         public int Id { get; set; }
-        public int VaccineId { get; set; }
         public int RequiredCount { get; set; }
         public DateTime? VaccinatedDate { get; set; }
-        public string HealthWorker { get; set; } 
+        public string HealthWorker { get; set; }
+
+        public int VaccineId { get; set; }
+        public Vaccine Vaccines { get; set; }
     }
 }
