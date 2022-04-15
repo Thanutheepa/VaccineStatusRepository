@@ -12,5 +12,8 @@ namespace VaccineStatusWeb.Services.Organizations
     {
         public List<Organization> AllOrganizations();
         public Organization GetOrganization(int id);
+        public Organization AddOrganization(Organization organization);
+        public void UpdateOrganization(Organization organization);
+        public void DeleteOrganization(Organization organization);
     }
 }

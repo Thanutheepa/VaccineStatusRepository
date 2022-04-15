@@ -25,5 +25,23 @@ namespace VaccineStatusWeb.Services.Organizations
 
             return _context.Organizations.Find(id);
         }
+
+        public Organization AddOrganization(Organization organization)
+        {
+            _context.Organizations.Add(organization);
+            _context.SaveChanges();
+            return _context.Organizations.Find(organization.Id);
+        }
+
+        public void UpdateOrganization(Organization organization)
+        {
+            _context.SaveChanges();
+        }
+
+        public void DeleteOrganization(Organization organization)
+        {
+            _context.Remove(organization);
+            _context.SaveChanges();
+        }
     }
 }

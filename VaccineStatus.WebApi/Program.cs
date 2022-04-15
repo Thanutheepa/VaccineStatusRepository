@@ -21,6 +21,8 @@ builder.Services.AddControllers(options=>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddScoped<IMedicalInstituteRepository, MedicalInstituteSqlSeverService>();
 builder.Services.AddScoped<IVaccineDataRepository, VaccineDataSqlServerService>();
 builder.Services.AddScoped<IOrganizationRespository, OrganizationSqlServerService>();
